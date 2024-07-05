@@ -1,0 +1,66 @@
+body {
+    font-family: 'Vazir', sans-serif;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center;
+    padding: 16px;
+}
+
+.card {
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    min-height: 400px;
+    overflow: hidden;
+    width: calc(50% - 16px); /* Two cards per row on mobile */
+    margin-bottom: 16px;
+    text-align: center; /* Center the content */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card img {
+    width: 100%;
+    min-height: 300px;
+    height: 400px; /* Fixed height for images */
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+}
+
+.card h3 {
+    font-size: 1.2em;
+    margin: 16px 0;
+}
+
+.card .btn {
+    display: block;
+    background: #007bff;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    margin: 0 16px 16px 16px;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.card .btn:hover {
+    background: #0056b3;
+}
+
+/* Media query for larger screens */
+@media (min-width: 600px) {
+    .card {
+        width: calc(33.333% - 16px); /* Three cards per row on larger screens */
+    }
+}
+
+@media (min-width: 900px) {
+    .card {
+        width: calc(25% - 16px); /* Four cards per row on even larger screens */
+    }
+}
